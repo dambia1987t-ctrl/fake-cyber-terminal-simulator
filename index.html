@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BLACK SERVER</title>
+
+<style>
+body{
+background:black;
+color:#00ff66;
+font-family:monospace;
+padding:30px;
+font-size:20px;
+overflow:hidden;
+}
+
+.blink{
+animation: blink 1s infinite;
+}
+
+@keyframes blink{
+50%{opacity:0;}
+}
+</style>
+
+</head>
+<body>
+
+<h2>BLACK SERVER INITIALIZING...</h2>
+
+<div id="log"></div>
+
+<script>
+
+const messages=[
+
+"[OK] Connecting...",
+"[OK] Loading modules...",
+"[OK] Scanning hidden folders...",
+"[OK] Checking cyber sapiens...",
+"[OK] Accessing black server...",
+"[OK] Synchronizing GPTBlueTeamGeng...",
+"[OK] Sector 3942 scanned",
+"[OK] Sector 1192 scanned",
+"[OK] Sector 9182 scanned",
+"WARNING: GPTBlueTeamGeng detected 🌌"
+
+];
+
+let i=0;
+
+function addLine(){
+
+if(i<messages.length){
+
+document.getElementById("log").innerHTML+=
+"<p>"+messages[i]+"</p>";
+
+i++;
+
+setTimeout(addLine,800);
+
+}
+
+}
+
+addLine();
+
+</script>
+
+<p class="blink">
+Damian@black-server:~$
+</p>
+
+</body>
+</html>
